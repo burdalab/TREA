@@ -7,14 +7,15 @@ Gene expression is controlled by transcriptional regulators (TRs) including DNA-
 Basic operation of TREA: Universal gene ID formatted gene expression datasets are evaluated independently by each database analytic. Chea and JASPAR-TRANSFAC databases are accessed through the online open-access Enrichr platform (https://amp.pharm.mssm.edu/Enrichr3/). Resource database output files containing statistically enriched TRs (Enrichr adj. P < 0.05; IPA Upstream Regulator P < 0.01) and their downstream target gene IDs were processed for TREA using the scripts provided in this repository. Final TREA libraries containing significantly enriched TRs and associated astrocyte target genes were then generated for each condition through a screening for candidates that met one or more of the following criteria: i) TR is identified by IPA® and Chea or JASPAR-TRANSFAC ii) TR is identified by IPA® or Chea or JASPAR-TRANSFAC and exhibits a significant fold-change (up or down) in the respective gene expression profile. When the same TR was identified across two or more resource databases target gene ID lists were merged into a single TR-target gene signature.
 
 
-RUNNING TREA
+
+RUNNING TREA WITH SAMPLE DATA:
 
 First time users should run TREA on the sample dataset (LPS_Cord) using the Jupyter notebook files found in the folder "Jupyter Notebook". 
 --> Run the notebooks in the order, first "1 - create_TREA_files.ipynb" and then "2 - create_collated_files.ipynb"
 --> The notebooks can be executed using the "Run all" command or by running each cell in the order provided. 
 
 
-If you wish to run TREA for a new dataset, follow these steps:
+RUNNING TREA ON A NEW DATASET:
 
 1) Add Chea, Jasper-Transfac and IPA Upstream Regulator resource database output files (.csv) in the respective folders found inside "Sample Files".
 Each of these resource database output files should contain two columns, named "term" and "genes". Where "term" is the regulator and "genes" are its regulated genes.
